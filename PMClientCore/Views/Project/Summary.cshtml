@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Projects Summary";
+}
+
+@*@section Scripts
+{
+    <script src="~/js/project_summary.js"></script>
+}*@
+<h2>Projects Summary</h2>
+<div style="float:right">
+    <a id="addBtn" class="btn btn-success" href="http://localhost:50324/Project/Add">New Project</a>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label>Project Filter Types:</label>
+        <select class="form-control" id="FilterTypesDDL"></select>
+        <label>Filter Options:</label>
+        <select class="form-control" id="FilterOptsDDL"></select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="table-responsive table-bordered table-striped">
+        <table id="ProjectsTable" class="table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Start Date</th>
+                    <th>Deadline</th>
+                    <th>Duration</th>
+                    <th>Assigned To</th>
+                    <th>Priority</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+

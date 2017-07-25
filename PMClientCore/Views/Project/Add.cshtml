@@ -1,0 +1,48 @@
+﻿@{ 
+    ViewData["Title"] = "Add Project";
+}
+@section Scripts
+{
+    <script src="~/js/project_add.js"></script>
+}
+<form class="project-form" id="newProjectForm">
+    <fieldset class="form-group">
+        <legend>Please fill out all required fields</legend>
+        <p>
+            <label class="required" for="projName">Project Name</label>
+            <input class="form-control" id="projName" name="projName" minlength="5" type="text" required>
+        </p>
+        <p>
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+        </p>
+        <p>
+            <label class="required" for="startDate">Start Date</label>
+            <input class="form-control" id="startDate" type="date" name="startDate" required>
+        </p>
+        <p>
+            <label class="required" for="deadline">Deadline</label>
+            <input class="form-control" id="deadline" type="date" name="deadline" required>
+        </p>
+        <p>
+            <label class="required" for="assignedTo">Assigned To</label>
+            <select class="form-control" id="assignedTo" name="assignedTo" required>
+                @*<option value="1">Calvin Johnson</option>*@
+            </select>
+        </p>
+        <p>
+            <label for="priority">Priority</label>
+            <select class="form-control" id="priority" name="priority">
+                @* We could bind this to value from data service as well *@
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </p>
+        <p>
+            <button type="button" class="btn btn-success" id="SubmitBtn">Submit</button>
+            <button type="button" class="btn btn-info" id="CancelBtn">Cancel</button>
+        </p>
+    </fieldset>
+</form>
